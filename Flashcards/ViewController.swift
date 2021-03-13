@@ -39,5 +39,22 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateFlashcard(question: String, answer: String) {
+        frontLabel.text = question
+        backLabel.text = answer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // destination for the segue is the Navigation Controller
+        let navigationController = segue.destination as! UINavigationController
+        
+        // Navigation Controller only contains a Creation View Controller
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        // set flashcardController [rp[erty to self
+        creationController.flashcardsController = self
+    }
+    
 }
 
