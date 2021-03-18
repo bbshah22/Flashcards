@@ -26,7 +26,7 @@ Created initial user interface for the Flashcard App
 ### App Walk-though
 
 <img src="https://media.giphy.com/media/n5iwyMreK2wrZm42cj/giphy.gif" width=200><br>
-
+<img src="https://media.giphy.com/media/gj5C7x49CCDZZxBZrh/giphy.gif" width=200><br>
 ## Required
 - [x] Create New Project in Xcode
 - [x] Add a view for the front side of the flashcard to display the question
