@@ -6,7 +6,7 @@
 This past week we added the functionality to add new flashcards!
 
 ### App Walk-though
-<img src="https://media.giphy.com/media/CpVgZbGtPB7JppV0jw/giphy.gif" width=200>
+<img src="https://media.giphy.com/media/CpVgZbGtPB7JppV0jw/giphy.gif" width=200><br>
 <img src="https://media.giphy.com/media/gj5C7x49CCDZZxBZrh/giphy.gif" width=200><br>
 ## Required
 - [X] User can open the creation screen
