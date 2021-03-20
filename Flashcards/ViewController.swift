@@ -170,8 +170,15 @@ class ViewController: UIViewController {
         // Navigation Controller only contains a Creation View Controller
         let creationController = navigationController.topViewController as! CreationViewController
         
-        // set flashcardController [rp[erty to self
+        // set flashcardController prpperty to self
         creationController.flashcardsController = self
+        
+        // for edit button
+        if segue.identifier == "EditSegue"{
+        creationController.initialQuestion = frontLabel.text
+        creationController.initialAnswer = backLabel.text
+        }
+        
     }
     
 }
