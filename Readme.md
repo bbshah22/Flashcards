@@ -8,6 +8,8 @@ This past week we added the functionality to save the flashcards to the disk so 
 ### App Walk-though
 <img src="https://media.giphy.com/media/bNJZOcgS8a6HEf74iP/giphy.gif" width=200><br>
 
+<img src="https://media.giphy.com/media/1VgmzX649b2B0UcNpZ/giphy.gif" width=200><br>
+
 ## Required
 - [x] User can browse through multiple flashcards
 - [x] User can re-open the app and see previously created flashcards
