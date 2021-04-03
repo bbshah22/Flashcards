@@ -9,7 +9,7 @@ This week we updated the UI
 
 <img src="https://media.giphy.com/media/AO8XeFxk6qa29cOgzQ/giphy.gif" width=200><br>
 
-<img src="https://imgur.com/a/Mexibza" width=200><br>
+<img src="https://ibb.co/58VfSBN" width=200><br>
 
 ## Required
 - [X] User should see the app icon 
