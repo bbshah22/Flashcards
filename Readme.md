@@ -9,7 +9,7 @@ This week we updated the UI
 
 <img src="https://media.giphy.com/media/AO8XeFxk6qa29cOgzQ/giphy.gif" width=200><br>
 
-<img src="https://ibb.co/58VfSBN" width=200><br>
+<img src="https://www.linkpicture.com/q/Screen-Shot-2021-04-03-at-8.58.56-AM.png" width=200><br>
 
 ## Required
 - [X] User should see the app icon 
