@@ -81,6 +81,12 @@ class ViewController: UIViewController {
 
     // when you tap on the flashcard it flips
     @IBAction func didTapOnFlashcard(_ sender: Any) {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.flipFlashcard()
+        })
+    }
+    
+    func flipFlashcard() {
         if(frontLabel.isHidden){
             frontLabel.isHidden = false;
         }
@@ -98,13 +104,54 @@ class ViewController: UIViewController {
         backLabel.text = currentFlashcard.answer
     }
     
+    func animateCardOut(previous: Bool){
+        if(previous == false){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            // Update labels
+            self.updateLabels()
+            
+            self.animateCardIn(previous: false)
+        })
+        }
+        
+        else{
+            card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            
+            UIView.animate(withDuration: 0.3){
+                self.card.transform = CGAffineTransform.identity
+            }
+        }
+    }
+    
+    func animateCardIn(previous: Bool){
+        if(previous == false){
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+        }
+        }
+        else{
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }, completion: { finished in
+                // Update labels
+                self.updateLabels()
+                
+                self.animateCardOut(previous: true)
+            })
+        }
+        
+    }
+    
     // previous button functionality
     @IBAction func didTapOnPrev(_ sender: Any) {
         // Decrease current index
         currentIndex = currentIndex - 1
         
-        // Update labels
-        updateLabels()
+        animateCardIn(previous: true)
         
         // Update buttons
         updateNextPrevButtons()
@@ -115,8 +162,8 @@ class ViewController: UIViewController {
         // Increase current index
         currentIndex = currentIndex + 1
         
-        // Update labels
-        updateLabels()
+        // animate card out
+        animateCardOut(previous: false)
         
         // Update buttons
         updateNextPrevButtons()
